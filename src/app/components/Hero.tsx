@@ -1,9 +1,10 @@
-'use client'
 
 import Image from "next/image";
 import { client, urlFor } from "../lib/sanity";
 import Link from "next/link";
 import { CloudCog } from "lucide-react";
+import heroImage1 from "../../../public/HeroImages/ba06b5a3-3cc0-4730-957a-a484b2fcbaa9.webp"
+
 
 async function getData() {
   const query = "*[_type == 'heroImage'][0]";
@@ -31,10 +32,10 @@ export default async function Hero() {
           </p>
         </div>
 
-        <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
+      <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
           <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:left-16 md:top-16 lg:ml-0">
             <Image
-              src={urlFor(data.image1).url()}
+              src={heroImage1}
               alt="Great Photo"
               className="h-full w-full object-cover object-center"
               priority
@@ -45,7 +46,7 @@ export default async function Hero() {
 
           <div className="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
             <Image
-              src={urlFor(data.image2).url()}
+              src={heroImage1}
               alt="Great Photo"
               className="h-full w-full object-cover object-center"
               width={500}
@@ -53,7 +54,7 @@ export default async function Hero() {
               priority
             />
           </div>
-        </div> 
+        </div>  
       </div>
 
       <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
